@@ -1,42 +1,50 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.cards > .card {
+    border: 2px solid black;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    transition: transform 0.3s ease-in-out;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card:hover {
+    cursor: pointer;
+    transform: rotate(5deg) scale(1.05);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+@keyframes rotateCard {
+    0% {
+      transform: rotateY(0);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
 }
-
+  
 .card {
-  padding: 2em;
+    transition: transform 0.5s ease-in-out;
+}
+  
+.card.rotate {
+    animation: rotateCard 1s linear forwards;
 }
 
-.read-the-docs {
-  color: #888;
+.game-msg, .highest {
+    text-align: center;
+    margin-top: 1rem;
 }
+
+.game-msg {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+
