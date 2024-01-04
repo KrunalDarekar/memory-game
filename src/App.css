@@ -47,4 +47,17 @@
     font-size: 1.5rem;
 }
 
-
+@media only screen and (max-width: 768px) {
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+      gap: .5rem;
+      justify-items: center;
+    }
+  
+    .cards > .card {
+      /* Adjust the card styles for the grid layout */
+      width: calc(50% - 0.5rem); /* Adjust the width to fit 2 cards in a row */
+      margin: 0;
+    }
+}
