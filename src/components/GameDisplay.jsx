@@ -42,6 +42,7 @@ function GameDisplay () {
                 setGameMsg("you have won the game")
                 setClickedArr([])
                 setScore(0)
+                return
             } else {
                 if(score + 1 > higestScore) setHighestScore(score + 1)
                 setScore(score + 1)
